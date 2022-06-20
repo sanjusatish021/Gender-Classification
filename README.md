@@ -16,6 +16,9 @@ Program to implement Gender Classification.
 Developed by   :  S. Sanju
 RegisterNumber :  212219040137
 */
+```
+
+```
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -31,6 +34,7 @@ df.info()
 ```
 ![Screenshot_3](https://user-images.githubusercontent.com/94214195/174538564-89b714fc-1adb-4e91-b0ba-e8b44825b263.png)
 
+### To check outliers in forehead_width_cm and forehead_height_cm
 ```
 sns.boxplot(data=df,x="forehead_width_cm")
 ```
