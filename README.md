@@ -45,13 +45,16 @@ sns.boxplot(data=df,x="forehead_height_cm")
 ```
 ![Screenshot_5](https://user-images.githubusercontent.com/94214195/174538654-269bafb2-9004-4394-a601-0bf57a2e71d6.png)
 
+### split data
 ```
 from sklearn.model_selection import train_test_split
 x=df.drop(columns="gender")
 y=df["gender"]
 
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size = 0.25, random_state = 0)
-
+```
+### Logistic Regression
+```
 from sklearn.linear_model import LogisticRegression
 
 lr = LogisticRegression(random_state = 0)
@@ -66,6 +69,7 @@ y_pred
 ```
 ![Screenshot_6 - Copy](https://user-images.githubusercontent.com/94214195/174539137-b101242f-9836-4685-bde3-b4456141d875.png)
 
+### To check accurecy model on test data using confusion_matrix
 ```
 from sklearn.metrics import confusion_matrix, accuracy_score
 cm = confusion_matrix(y_test, y_pred)
@@ -83,6 +87,7 @@ print("model_accuracy =",accuracy_score(y_test, y_pred))
 ```
 ![Screenshot_8](https://user-images.githubusercontent.com/94214195/174539534-5fba982d-f1b4-42a2-816c-0d34dad82277.png)
 
+### An other way to check accurecy model test and train data
 ```
 print("model_accuracy_on_train_data = ",lr.fit(X_train,y_train).score(X_train,y_train))
 ```
@@ -94,7 +99,7 @@ print("model_accuracy_on_train_data = ",lr.fit(X_train,y_train).score(X_test,y_t
 ```
 ![Screenshot_8 - Copy (2)](https://user-images.githubusercontent.com/94214195/174539572-a5e520e8-a9cb-4773-bd9d-1df05c52da05.png)
 
-
+### KNN model
 ```
 from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors= 5)
