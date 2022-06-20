@@ -143,5 +143,7 @@ plt.xlabel("k values")
 plt.ylabel("Accuracy")
 plt.show()
 ```
+
+## Output
 ![download (1)](https://user-images.githubusercontent.com/94214195/174539868-16565b79-a4e0-425f-ade2-860121e6c1de.png)
 
